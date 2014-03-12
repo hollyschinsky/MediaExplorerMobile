@@ -1,0 +1,29 @@
+<div class="modal">
+    <header class="bar bar-header bar-dark">
+        <h1 class="title">Advanced Criteria</h1>
+        <button class="button button-clear button-positive" ng-click="closeSortModal()">Done</button>
+    </header>
+    <ion-content has-header="true">
+        <div class="padding">
+            <p>Select Sort and Filter Criteria</p>
+            <div class="item item-input-inset">
+                <label style="margin-right: 5px;">Sort by
+                    <select ng-model="sortBy">
+                        <option value="artistName">Artist</option>
+                        <option value="collectionName">Collection Name</option>
+                        <option value="wrapperType">Media Item Name</option>
+                        <option value="kind">Media Type</option>
+                    </select>
+                </label>
+            </div>
+            <div class="item item-input-inset">
+                <label>Filter by
+                    <input class="item-input-wrapper" type="text" ng-model="filterTerm">
+                </label>
+            </div>
+            <div class="item item-input-inset">
+                <button class="button button-positive" ng-click="saveSort()">Apply</button>
+            </div>
+        </div>
+    </ion-content>
+</div>

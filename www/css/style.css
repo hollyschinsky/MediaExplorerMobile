@@ -1,0 +1,46 @@
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+#aboutDesc {
+    font-family: fantasy;
+    font-weight: bold;
+    width: 50%;
+}
+#author {
+    font-family: Menlo;
+    font-weight: bold;
+}
+#results, #volume {
+    float: right;
+}
+#volLbl {
+    float:  left;
+}
+.align {
+    margin-top: 10px;
+}
+#homeTxt {
+    text-align: center;
+}
+.bgMain {
+    left-margin: -20px;
+    margin-top: 7%;
+    background-image: url('../img/itunes.jpg');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.bgSearch {
+    background-image: url('../img/itunes.jpg');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.fade-bar {
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    opacity: 0;
+    background-color: #000;
+}

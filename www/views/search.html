@@ -1,0 +1,43 @@
+<ion-view class="bgSearch" title="navTitle" left-buttons="leftButtons" right-buttons="rightButtons">
+
+    <ion-content has-header="true">
+        <div class="item item-input-inset">
+            <label style="margin-right: 5px;">
+                <select ng-model="mediaTypes.type"  ng-change="search()">
+                    <option value="all" selected>All Media</option>
+                    <option value="musicVideo">Video</option>
+                    <option value="movie">Movie</option>
+                    <option value="music">Music</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="tvShow">TV Show</option>
+                </select>
+            </label>
+
+            <label class="item-input-wrapper">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="request.query" />
+            </label>
+
+            <button class="button button-positive"  style="margin-left: 5px;" ng-click="search()">
+            Go!
+            </button>
+        </div>
+
+        <div ng-show="infoTxt!=null" style="margin-left:3px;">
+            <label class="assertive">{{infoTxt}}</label>
+        </div>
+        <div>
+            <div class="row positive-bg" ng-show="mediaResults.resultCount>0">
+                <div class="col light">Cover</div>
+                <div class="col light">Track</div>
+                <div class="col col-20 light">Price</div>
+            </div>
+            <div class="row stable-bg" ng-repeat="item in mediaResults.results | filter:filterTerm | orderBy:sortBy" >
+               <div class="col"><a ng-click="checkMedia(item)"><img id="img" ng-src="{{item.artworkUrl60}}"/></a></div>
+                <div class="col"><a ng-click="checkMedia(item)">{{(item.trackName != null) && item.trackName || item.collectionName}}</a></div>
+                <div class="col col-20">{{item.trackPrice}}</div>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

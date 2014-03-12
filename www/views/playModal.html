@@ -1,0 +1,21 @@
+<div class="modal">
+    <header class="bar bar-header bar-dark">
+        <h1 class="title">Media Player</h1>
+        <button class="button button-clear button-positive" ng-click="closePlayModal()">Close</button>
+    </header>
+    <ion-content has-header="true">
+        <div class="padding">
+            <div>
+                <blockquote>
+                    <p>Now Playing {{kind | capitalize}} - {{title | capitalize}}</p>
+
+                    <small>by <cite>{{artist}}</cite></small>
+                </blockquote>
+                <video id="vid" width="320" height="240" video-loader autoplay controls>
+                    {{url}}
+                    <source id="vidsrc" ng-src="url" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </ion-content>
+</div>
