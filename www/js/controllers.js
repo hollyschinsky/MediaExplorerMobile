@@ -27,7 +27,6 @@ mediaApp.controller('AboutCtrl', function ($scope) {
         type: 'button-icon button-clear ion-email',
         tap: function(e) {
             if (window.plugins && window.plugins.emailComposer ) {
-
                 window.plugins.emailComposer.showEmailComposerWithCallback(console.log("Email callback " + e), "Want to know more about Media Explorer...", "Please send me more details.", "hollyschinsky@gmail.com", null, null, false, null, null);
             }
             else {

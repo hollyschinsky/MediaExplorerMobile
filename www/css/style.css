@@ -36,11 +36,13 @@ body {
     background-repeat: no-repeat;
     background-position:center;
 }
-.fade-bar {
-    height: 20px;
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    opacity: 0;
-    background-color: #000;
+@media screen and (max-device-width: 640px){
+    .fade-bar {
+        height: 20px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        opacity: 0;
+        background-color: #000;
+    }
 }
