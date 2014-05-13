@@ -1,22 +1,38 @@
 MediaExplorerMobile
 ===================
 
-You can create your own new project locally using the Cordova CLI based on my code (after you've cloned or downloaded) with:
+An iTunes Media Explorer mobile application built with [Cordova](http://cordova.apache.org/) and [Ionic Framework](http://http://ionicframework.com/)
 
-$ cordova create MyMediaExplorer "com.mediaexplorer.app" "MediaExplorerApp" --copy-from /MediaExplorerMobile/www 
+Try the [hosted sample](http://devgirl.org/files/MediaExplorerMobile/www/#/menu/home)
 
-$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
-$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
-$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-statusbar.git
-$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+[Read more](http://devgirl.org/2014/03/12/sample-phonegap-application-itunes-explorer-with-angularjsionic/) about it
 
 or
 
-$ cordova plugin add org.apache.cordova.console
-$ cordova plugin add org.apache.cordova.device
-$ cordova plugin add org.apache.cordova.inappbrowser
-$ cordova plugin add org.apache.cordova.statusbar
+##Try it yourself locally
 
-then build or run it 
+#### Create Project
+You can create your own new project locally using the Cordova CLI based on my code (after you've cloned or downloaded) with:
 
-$ cordova run ios
+    $ cordova create MyMediaExplorer "com.mediaexplorer.app" "MediaExplorerApp" --copy-from /MediaExplorerMobile/www 
+
+Or create a new project and manually replace the www folder with mine.
+
+    $ cordova create MyMediaExplorer
+
+#### Add Plugins
+
+Add the following plugins to the application:
+
+    $ cordova plugin add org.apache.cordova.console 
+    $ cordova plugin add org.apache.cordova.device 
+    $ cordova plugin add org.apache.cordova.inappbrowser 
+    $ cordova plugin add org.apache.cordova.statusbar
+
+#### Add a Platform
+    $ cordova platform add ios
+
+#### Run the App
+
+    $ cordova run ios
+
