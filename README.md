@@ -26,6 +26,7 @@ Add the following plugins to the application:
     $ cordova plugin add org.apache.cordova.device 
     $ cordova plugin add org.apache.cordova.inappbrowser 
     $ cordova plugin add org.apache.cordova.statusbar
+    $ cordova plugin add https://github.com/jcjee/email-composer
 
 #### Add a Platform
     $ cordova platform add ios
