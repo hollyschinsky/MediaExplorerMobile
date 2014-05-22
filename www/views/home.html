@@ -1,6 +1,15 @@
 <ion-view class="bgMain"  title="'iTunes Media Explorer'" left-buttons="leftButtons">
-    <ion-content id="homeTxt" has-header="true" padding="true">
-        <p>Welcome to the iTunes Media Explorer</p>
-        <p>To get started, swipe to the right or click the side menu button above.</p>
+    <ion-content id="homeTxt" has-header="true">
+        <div>
+            <button class="button button-balanced icon-left ion-person-add" ng-click="add()"></button>
+            <button class="button button-assertive icon-left ion-ios7-minus" ng-click="remove()"></button>
+            <div class="pad-sides" masonry="{columnWidth: 100, gutter: 5, transitionDuration: '.9s',
+                        hiddenStyle: {opacity: .001, transform: 'scale(0.01)', transform: 'rotate(200deg)'},
+                        visibleStyle: {opacity: 1, transform: 'rotate(200deg)'}}">
+                <div class="masonry-brick" ng-repeat="singer in singers">
+                    <img ng-src="{{ singer }}" alt="pop singer">
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

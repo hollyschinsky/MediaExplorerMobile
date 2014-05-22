@@ -1,7 +1,7 @@
 'use strict';
 
 /* App Module */
-var mediaApp = angular.module('mediaApp', ['ionic','ngResource'])
+var mediaApp = angular.module('mediaApp', ['ionic','ngResource','wu.masonry'])
 
 mediaApp.config(function($stateProvider, $urlRouterProvider) {
 
@@ -10,13 +10,14 @@ mediaApp.config(function($stateProvider, $urlRouterProvider) {
             url: "/menu",
             abstract: true,
             templateUrl: "menu.html"
+
         })
-        /* Could update home to be in it's own separate file */
         .state('menu.home', {
             url: "/home",
             views: {
                 'menuContent' :{
-                    templateUrl: "views/home.html"
+                    templateUrl: "views/home.html",
+                    controller: "HomeCtrl"
                 }
             }
         })

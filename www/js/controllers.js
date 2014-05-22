@@ -15,8 +15,35 @@ mediaApp.controller('MainCtrl', function($scope, $ionicSideMenuDelegate,Settings
         console.log("Cordova is ready");
         // Add device specific stuff here
     });
+
+    $scope.singers = ['img/shakira.jpg','img/justin.jpg','img/selena.jpg','img/adam.jpg'];
+    var moreImgs = ['img/ariana.jpg', 'img/ed.jpg', 'img/harry.jpg',
+        'img/alicia.jpg', 'img/jennifer.jpg','img/blake.jpg', 'img/pink.jpg','img/bruno.jpg','img/christina.jpg','img/jason.jpg',
+        'img/pitbull.jpg','img/katy.jpg','img/iggy.jpg'];
+
+    $scope.add = function add(name) {
+        if (moreImgs.length>0)
+            $scope.singers.push(moreImgs.pop());
+        else {
+            moreImgs.push($scope.singers.splice(0,1)[0]);
+        }
+    }
+
+    $scope.remove = function remove() {
+        var num = ~~(Math.random() * $scope.singers.length);
+        moreImgs.push($scope.singers[num]);
+        $scope.singers.splice(num,1)[0];
+    };
+
+    if ($scope.sideMenuController !=null)
+        $scope.sideMenuController.toggleLeft();
+
 })
 
+mediaApp.controller('HomeCtrl', function ($scope) {
+    if ($scope.sideMenuController.isOpen())
+        $scope.sideMenuController.toggleLeft();
+})
 
 mediaApp.controller('AboutCtrl', function ($scope) {
     $scope.navTitle = "About Media Explorer";
@@ -38,6 +65,8 @@ mediaApp.controller('AboutCtrl', function ($scope) {
         console.log("Link to " + link);
         var ref = window.open(link, '_blank', 'location=yes');
     }
+
+
 })
 
 
