@@ -7,7 +7,7 @@ An iTunes Media Explorer mobile application built with [Cordova](http://cordova.
 
 - [Read more](http://devgirl.org/2014/03/12/sample-phonegap-application-itunes-explorer-with-angularjsionic/) about it
 
-##Run it yourself
+## Run it yourself
 
 #### Create Project
 You can create your own new project locally using the Cordova CLI based on my code (after you've cloned or downloaded) with:
